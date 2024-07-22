@@ -97,6 +97,8 @@ services:
         ports:
             - "3001:1080"
             - "25:1025"
+        environment:
+            MAILDEV_IP: "::" # https://github.com/maildev/maildev/issues/484
 volumes:
   mysql:
     driver: local
